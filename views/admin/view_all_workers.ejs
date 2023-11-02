@@ -1,0 +1,50 @@
+<%- include("../partial/header"); %>
+
+<!-- ======= Recent Blog Posts Section ======= -->
+  <section id="recent-blog-posts" class="recent-blog-posts">
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h1>Admin Dashboard</h1>
+       
+      </div>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">🚹</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Your Location</th>
+            <th scope="col">Your Skills</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Send Message</th>
+            <th scope="col">Check to Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% workers.forEach(person =>{ %>  
+          <tr>
+            <form action="/delete" method="post">
+            <td>🚹</td>
+            <td><%= person.Fname %></td>
+            <td><%= person.email %></td>
+            <td><%= person.location %></td>
+            <td><%= person.skill %></td>
+            <td><%= person.tel %></td>
+            <td><a href="/sms-sent-thanks">SMS</a></td>
+            <td><i class="fa-solid fa-user-xmark"></i><input type="checkbox" name="checkbox" value="<%=person._id %>" onchange="this.form.submit()"></td>
+        </form>
+          </tr>
+
+          <% }); %>
+        </tbody>
+      </table>
+
+    </div>
+
+  </section><!-- End Recent Blog Posts Section -->
+
+
+<%- include("../partial/footer"); %>

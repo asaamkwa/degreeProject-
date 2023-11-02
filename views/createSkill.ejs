@@ -1,0 +1,43 @@
+ <%- include("loginHeader/headerLogin"); %>
+
+
+<div class="container myprofile">
+  <div class="row">
+    <div class=" myprofile-11">
+
+        <div class="">
+          <h2>Create a Skills</h2>
+          <form class="" action="/createSkill" method="post" autocomplete="off">
+            <label>Full Nmae:</label>
+            <input type="text" name="fNane" placeholder="Your name" required >
+            <br>
+            <br>
+            <label>Email:</label>
+            <input type="email" name="email" required autocomplete="off">
+            <br>
+              <label> Skill Nmae: </label>
+              <input type="text" name="skillName" placeholder="Skill Name" required>
+              <br>
+              <label>Phone Number:</label>
+              <input type="tel" name="telNumber" placeholder="0553354247" required>
+              <br>
+              <label>Location:</label>
+              <input type="text" name="locationName" placeholder="Your Currnt Location" required>
+              <br>
+
+                    <br>
+                  <center>  <button type="submit"><i class="fa fa-database"> </i>Submit</button></center>
+
+
+          </form>
+        </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+ <%- include("partial/footer"); %>

@@ -1,0 +1,217 @@
+ <%- include("partial/header"); %>
+
+
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="hero">
+   <div class="container position-relative">
+     <div class="row gy-5" data-aos="fade-in">
+       <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+         <h1> </h1>
+         <h2>We are ready to <span> work</span></h2>
+         <p>Forget the old rules. You can have the best people.
+Right now. Right here.</p>
+         <div class="d-flex justify-content-center justify-content-lg-start">
+           <a href="/find-talent-workers" class="btn-get-started">Get Started</a>
+           <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+         </div>
+       </div>
+       <div class="col-lg-6 order-1 order-lg-2">
+         <img src="images/capen.jpg" class="img-fluid oreder-ima-1" alt="" data-aos="zoom-out" data-aos-delay="100">
+       </div>
+     </div>
+   </div>
+
+   <div class="icon-boxes position-relative">
+     <div class="container position-relative">
+       <div class="row gy-4 mt-5">
+
+         <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+           <div class="icon-box">
+             <div class="icon"><i class="bi bi-easel"></i></div>
+             <h4 class="title"><a href="/electrician" class="stretched-link">Electricians</a></h4>
+           </div>
+         </div><!--End Icon Box -->
+
+         <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+           <div class="icon-box">
+             <div class="icon"><i class="bi bi-gem"></i></div>
+             <h4 class="title"><a href="/carpenter" class="stretched-link">Carpenters</a></h4>
+           </div>
+         </div><!--End Icon Box -->
+
+         <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+           <div class="icon-box">
+             <div class="icon"><i class="bi bi-geo-alt"></i></div>
+             <h4 class="title"><a href="/cleaner" class="stretched-link">Cleaners</a></h4>
+           </div>
+         </div><!--End Icon Box -->
+
+         <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+           <div class="icon-box">
+             <div class="icon"><i class="bi bi-command"></i></div>
+             <h4 class="title"><a href="/gardener" class="stretched-link">Gardners</a></h4>
+           </div>
+         </div><!--End Icon Box -->
+
+       </div>
+     </div>
+   </div>
+
+
+ </section>
+ <!-- End Hero Section -->
+
+
+
+
+   <!-- ======= Recent Blog Posts Section ======= -->
+     <section id="recent-blog-posts" class="recent-blog-posts">
+
+       <div class="container" data-aos="fade-up">
+
+         <div class="section-header">
+           <h2 style="font-size: 30px; font-weight: 900;">Workers list below</h2>
+           <p>We are available for your work!</p>
+         </div>
+
+         <table class="table table-striped">
+          <thead>
+            <tr>
+              <td>🚹</td>
+              <th scope="col">First Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Your Location</th>
+              <th scope="col">Your Skills</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Send Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% workers.forEach(person =>{ %>
+            <tr>
+              <td>🚹</td>
+              <td><%= person.Fname %></td>
+              <td><%= person.email %></td>
+              <td><%= person.location %></td>
+              <td><%= person.skill %></td>
+              <td><i class="fa-solid fa-phone"></i><%= person.tel %></td>
+              <td><a href="/sms-sent-thanks">SMS</a></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+
+       </div>
+
+     </section><!-- End Recent Blog Posts Section -->
+<br>
+<hr>
+
+
+         <!-- ======= Call To Action Section ======= -->
+         <section id="cta" class="cta">
+           <div class="container" data-aos="zoom-out">
+
+             <div class="row g-5">
+
+               <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
+                 <h3>Fill Cleaning <em>Service</em> provider</h3>
+                 <p> UE Cleaning is a full Cleaning service provider covering residential ,offices and specialty Cleaning services in Ghana. Our values are honesty, integrity, professionalism and high quality of work.</p>
+                 <a class="cta-btn align-self-start" href="#">Call To Action</a>
+               </div>
+
+               <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
+                 <div class="img">
+                   <img src="images/home.jpg" alt="" class="img-fluid">
+                 </div>
+               </div>
+
+             </div>
+
+           </div>
+         </section><!-- End Call To Action Section -->
+
+         <!-- ======= Contact Section ======= -->
+     <section id="contact" class="contact">
+       <div class="container" data-aos="fade-up">
+
+         <div class="section-header">
+           <h2>Contact</h2>
+           <p>Call us now</p>
+         </div>
+
+         <div class="row gx-lg-0 gy-4">
+
+           <div class="col-lg-4">
+
+             <div class="info-container d-flex flex-column align-items-center justify-content-center">
+               <div class="info-item d-flex">
+                 <i class="bi bi-geo-alt flex-shrink-0"></i>
+                 <div>
+                   <h4>Location:</h4>
+                   <p>Upper East, Bolgatanga, RCC Road </p>
+                 </div>
+               </div><!-- End Info Item -->
+
+               <div class="info-item d-flex">
+                 <i class="bi bi-envelope flex-shrink-0"></i>
+                 <div>
+                   <h4>Email:</h4>
+                   <p>tiimtech21@mail.com</p>
+                 </div>
+               </div><!-- End Info Item -->
+
+               <div class="info-item d-flex">
+                 <i class="bi bi-phone flex-shrink-0"></i>
+                 <div>
+                   <h4>Call:</h4>
+                   <p>0553354247</p>
+                 </div>
+               </div><!-- End Info Item -->
+
+               <div class="info-item d-flex">
+                 <i class="bi bi-clock flex-shrink-0"></i>
+                 <div>
+                   <h4>Open Hours:</h4>
+                   <p>Mon-Sat: 6AM - 5PM</p>
+                 </div>
+               </div><!-- End Info Item -->
+             </div>
+
+           </div>
+
+           <div class="col-lg-8">
+             <form action="/contact" method="post" role="form" class="php-email-form">
+               <div class="row">
+                 <div class="col-md-6 form-group">
+                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                 </div>
+                 <div class="col-md-6 form-group mt-3 mt-md-0">
+                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                 </div>
+               </div>
+               <div class="form-group mt-3">
+                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+               </div>
+               <div class="form-group mt-3">
+                 <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+               </div>
+               <div class="my-3">
+                 <div class="loading">Loading</div>
+                 <div class="error-message"></div>
+                 <div class="sent-message">Your message has been sent. Thank you!</div>
+               </div>
+               <div class="text-center"><button type="submit">Send Message</button></div>
+             </form>
+           </div><!-- End Contact Form -->
+
+         </div>
+
+       </div>
+     </section><!-- End Contact Section -->
+
+
+
+
+
+ <%- include("partial/footer"); %>

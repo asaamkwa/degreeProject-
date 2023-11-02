@@ -1,0 +1,39 @@
+<%- include("loginHeader/headerLogin"); %>
+
+
+
+<section class="vh-100" style="background-color: #508bfc;">
+  <h1 style="color: aliceblue; padding: 10px; text-align: center;">Your Email:  <%= me %></h1>
+
+<div class="container py-5 h-100">
+ <div class="row justify-content-center">
+
+   <div class="col-lg-3">
+     <div class="card shadow-2-strong" style="border-radius: 1rem;">
+       <div class="card-body text-center">
+         <h1>Gige!</h1>
+           <a href="/createSkill">Create gige</a>
+       </div>
+
+     </div>
+   </div>
+   <div class="col-lg-3">
+     <div class="card shadow-2-strong" style="border-radius: 1rem;">
+       <div class="card-body text-center">
+         <h1>View Gige!</h1>
+           <a href="/all-gigs">View Gige</a>
+
+       </div>
+
+     </div>
+   </div>
+ </div>
+</div>
+</section>
+
+
+
+
+
+
+<%- include("partial/footer"); %>

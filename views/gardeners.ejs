@@ -1,0 +1,56 @@
+
+<%- include("partial/header"); %>
+
+
+
+<!-- ======= Recent Blog Posts Section ======= -->
+<section id="recent-blog-posts" class="recent-blog-posts">
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2 style="font-size: 30px; font-weight: 900;">Gardners list below!</h2>
+       
+      </div>
+
+      <table class="table table-striped">
+       <thead>
+         <tr>
+           <td>🚹</td>
+           <th scope="col">First Name</th>
+           <th scope="col">Email</th>
+           <th scope="col">Your Location</th>
+           <th scope="col">Your Skills</th>
+           <th scope="col">Phone Number</th>
+           <th scope="col">Send Message</th>
+         </tr>
+       </thead>
+       <tbody>
+         <% workers.forEach(person =>{ %>
+
+           <% if(person.skill == "gardeners"){ %>
+               
+                <tr>
+                    <td>🚹</td>
+                    <td><%= person.Fname %></td>
+                    <td><%= person.email %></td>
+              <td><%= person.location %></td>
+              <td><%= person.skill %></td>
+              <td><i class="fa-solid fa-phone"></i><%= person.tel %></td>
+              <td><a href="/sms-sent-thanks">SMS</a></td>
+                </tr>
+          <%  }   %>
+
+         <% }); %>
+       </tbody>
+     </table>
+
+    </div>
+
+  </section><!-- End Recent Blog Posts Section -->
+
+
+
+
+
+<%- include("partial/footer"); %>
